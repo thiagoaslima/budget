@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../css/font-awesome-ie7.min.css">
+        <![endif]-->
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body data-check="true">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <br><br><br>
+
+        <div class="container">
+
+            <form id="teste" class="row bdgt"><h1>Subs</h1></div>
+
+            <form action="" class="row bdgt">
+                
+                <!-- TITLE UP -->
+                <div id="project-header" class="project row">
+                    <div class='span10'>
+                        <h2><small>Projeto</small><br> Site Sincomam</h2>
+                    </div>
+                </div>
+
+                <!-- ETAPAS -->
+                <div class="all-stages">
+                    <div class="row stage">
+                        <div class='span10'>
+                            <h4><small>etapa 1</small><br>Planejamento</h4>
+                        </div>
+                        <div class="span2">
+                            <span class="value">000</span>
+                        </div>
+                    </div>
+
+                    <!-- CORE ACTIVITIES -->
+                    <div class="core">
+                        <div class="row activityType">
+                            <div class="span11 label">
+                                <span><i class="icon-angle-up icon-large"></i> atividades</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row step">
+                            <div class="span11"><div class="row">
+                                <div class="span2"></div>
+                                <div class="span7">
+                                    <i class="icon-ok"></i>
+                                    Pesquisa
+                                </div>
+                                <div class="span2">0.00</div>
+                            </div></div>
+                        </div>
+
+                    </div><!-- CORE ACTIVITIES -->
+
+
+                    <!-- EXTRA ACTIVITIES -->
+                    <div class="optional">
+                        <div class="row activityType">
+                            <div class="span10 offset1 label">
+                                <span><i class="icon-angle-up icon-large"></i> extras</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row step">
+                            <div class="span10 offset1">
+                                <div class="row">
+                                    <div class="span2">&times;</div>
+                                    <div class="span6">nome da tarefa</div>
+                                    <div class="span2">0.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!-- EXTRA ACTIVITIES -->
+
+                </div>
+            </form>
+           
+
+        </div> <!-- /container -->
+
+        <!-- TEMPLATES -->
+        <script type="text/tmp" id="tmp-project-header">
+            <div id="project-header" class="project row">
+                <div class='span10'>
+                    <h2><small>Projeto</small><br> {{name}}</h2>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/tmp" id="tmp-stage-header">
+            <div class="row stage">
+                <div class='span10 title'>
+                    <h4><small>etapa {{number}}</small><br>{{name}}</h4>
+                </div>
+                <div class="span2 value">{{defPrice}}</div>
+            </div>
+        </script>
+
+        <script type="text/tmp" id="tmp-core-label">
+            <div class="row activityType">
+                <div class="span11 label">
+                    <span><i class="icon-angle-up icon-large"></i> atividades</span>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/tmp" id="tmp-core-step">
+            <div class="row step">
+                <div class="span11"><div class="row">
+                    <div class="span2"></div>
+                    <div class="span9 title">
+                        <i class="icon-ok"></i>
+                        {{name}}
+                    </div>
+                </div></div>
+            </div>
+        </script><!-- !TEMPLATES -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/project.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/behaviour.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
