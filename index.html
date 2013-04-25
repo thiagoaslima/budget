@@ -120,7 +120,7 @@
         <script type="text/tmp" id="tmp-core-label">
             <div class="row activityType">
                 <div class="span11 label">
-                    <span><i class="icon-angle-up icon-large"></i> atividades</span>
+                    <span><i class="icon-angle-up icon-large"></i><i class="icon-angle-down icon-large"></i> atividades</span>
                 </div>
             </div>
         </script>
@@ -135,6 +135,29 @@
                     </div>
                 </div></div>
             </div>
+        </script>
+
+        <script type="text/tmp" id="tmp-extra-label">
+            <div class="row activityType">
+                <div class="span11 label">
+                    <span><i class="icon-angle-up icon-large"></i><i class="icon-angle-down icon-large"></i> adicionais</span>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/tmp" id="tmp-extra-step">
+            <div class="row step" data-included="true">
+                <div class="span11"><div class="row">
+                    <div class="span2 remove">
+                        <i class="icon-remove icon-2x"></i>
+                    </div>
+                    <div class="span7 title">
+                        <i class="icon-ok"></i>
+                        {{name}}
+                    </div>
+                    <div class="span2 value">{{price}}</div>
+                </div></div>
+            </div>
         </script><!-- !TEMPLATES -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -147,12 +170,12 @@
         <script src="js/project.js"></script>
         <script src="js/init.js"></script>
         <script src="js/behaviour.js"></script>
-
+<!-- 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-    </body>
+ -->    </body>
 </html>

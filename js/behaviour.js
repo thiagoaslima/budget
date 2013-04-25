@@ -1,47 +1,41 @@
 $(function (w, doc, $, P, undefined){
 
+    $('form.bdgt').on('click', '.activityType', function (evt) {
+        var that = $(this),
+            div = $(this).parent(),
+            st = div.attr('data-status'),
+            ns = (st === 'open') ? 'closed' : 'open';
+
+        div.stop().animate({height: div.data(ns+"Height")}, 500, function(){
+            div.attr('data-status', ns);
+        });
+    });
+
     $('form.bdgt').find('.activityType').each( function (evt) {
         var that = $(this),
             div = $(this).parent(),
             st;
-        div.open = div.height();
-        div.closed = that.height();
-        div.data('status', 'open');
-
-        return (function (evt) {
-            that.on('click', function (evt) {
-                console.log(div.data('status'));
-
-                var st = div.data('status'),
-                    ns = (st === 'open') ? 'closed' : 'open';
-
-                div.stop().animate({height: div[st]}, 500)
-                div.data('status', ns);
-            }).click();
-        }());
+        div.data('openHeight', div.height());
+        div.data('closedHeight', that.height());
+        div.attr('data-status', 'open');
     });
 
-
     $('form.bdgt').on("click", ".stage", function() {
-
-        console.log('click');
         var stage = $(this),
             core = stage.next(".core"),
-            coreStatus = core.data('status'),
+            coreStatus = core.attr('data-status'),
             extra = stage.next(".extra"),
-            extraStatus = extra.data('status');
+            extraStatus = extra.attr('data-status');
 
-        console.log(stage.hasClass('stage'), core, coreStatus, extra, extraStatus);
-
-        if (coreStatus == "open") {
+        if (coreStatus === "open") {
             core.find('.activityType').trigger('click');
         }
 
-        if (extraStatus == "open") {
+        if (extraStatus === "open") {
             extra.find('.activityType').trigger('click');
         }
 
-        if (extraStatus === coreStatus === "closed") {
+        if (extraStatus === "closed" && coreStatus === "closed") {
             core.find('.activityType').trigger('click');
             extra.find('.activityType').trigger('click');
         }

@@ -103,6 +103,15 @@ $(function (w, doc, $, undefined) {
                         desc: "",
                         more: ""
                     }
+                ],
+
+                extra: [
+                    {
+                        name: "Design responsivo",
+                        desc: "O conteúdo de um web site responsivo vai se adequar ao espaço disponível, sem perder a capacidade de transmitir o necessário ao usuário, independente do tamanho do aparelho usado para o acesso.",
+                        more: "",
+                        price: 400,
+                    }
                 ]
             },
 

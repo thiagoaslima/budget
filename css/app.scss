@@ -59,7 +59,27 @@ html * {
     }
 }
 
-.activityType > .label {
+[data-status="closed"] .icon-angle-down,
+[data-status="open"] .icon-angle-up {
+    display: inline;
+}
+[data-status="closed"] .icon-angle-up,
+[data-status="open"] .icon-angle-down {
+    display: none;
+}
+[data-status="closed"] .label {
+    background-color: #777777;
+}
+
+.label {
+    -webkit-transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -ms-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+}
+
+.activityType .label {
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     cursor: pointer;
@@ -90,6 +110,11 @@ html * {
     padding: 0 45px;
 }
 
+[data-included='true'] {
+    font-style: italic;
+    color: #999999;
+}
+
 .stage > .title p {
     padding-left: 50px;
     color: #777777;
@@ -113,5 +138,26 @@ html * {
 
     .desc {
         font-size: 12px;
+        line-height: 15px;
+        margin-top: 5px;
     }
+}
+
+.extra {
+    padding: 0 45px;
+
+    .step {
+        cursor: pointer;
+    }
+
+    .remove {
+        text-align: center;
+        color: #D5D5D5;
+    }
+}
+
+
+
+[data-included='false'] .step {
+    background-color: rgb(255,255,245);
 }

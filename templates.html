@@ -18,7 +18,7 @@
 <script type="text/tmp" id="tmp-core-label">
     <div class="row activityType">
         <div class="span11 label">
-            <span><i class="icon-angle-up icon-large"></i> atividades</span>
+            <span><i class="icon-angle-up icon-large"></i><i class="icon-angle-down icon-large"></i> atividades</span>
         </div>
     </div>
 </script>
@@ -35,15 +35,24 @@
     </div>
 </script>
 
-<script type="text/tmp" id="tmp-step">
+<script type="text/tmp" id="tmp-extra-label">
+    <div class="row activityType">
+        <div class="span11 label">
+            <span><i class="icon-angle-up icon-large"></i><i class="icon-angle-down icon-large"></i> adicionais</span>
+        </div>
+    </div>
+</script>
+
+<script type="text/tmp" id="tmp-extra-step">
     <div class="row step">
         <div class="span11"><div class="row">
             <div class="span2"></div>
-            <div class="span7">
+            <div class="span7 title">
                 <i class="icon-ok"></i>
                 {{name}}
             </div>
-            <div class="span2">0.00</div>
+            <div class="span2 value">{{price}}</div>
         </div></div>
     </div>
 </script>
+

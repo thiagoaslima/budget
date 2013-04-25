@@ -31,7 +31,7 @@
         function format (key, value) {
             var re = new RegExp('{{' + key + '}}','g');
 
-            if (key === 'defPrice') {
+            if (key === 'defPrice' || key === 'price') {
                 value = $(value).money();
             }
 

@@ -75,7 +75,7 @@ $(function (w, doc, $, P, undefined){
                             var desc = $('<p/>', {
                                 class: 'desc',
                                 html: core.desc
-                            })
+                            });
 
                             $(row).find('.title').append(desc);
                         }
@@ -88,15 +88,50 @@ $(function (w, doc, $, P, undefined){
                     allStages.append(coreDiv);
                 }
 
-                //  check if exists extra steps
+                //  check if exists extra(optional) steps
                 if (stage.extra && stage.extra.length > 0) {
-                    var extraDiv;
+                    var allExtra = stage.extra,
+                        extraTmpl = $('#tmp-extra-step').contents(),
+                        extraRow = [],
+                        extraDiv,
+                        extraLabel;
 
-                     // create core div
+                     // create extra div
                     extraDiv = $('<div />', {
                         class: 'extra',
                         'data-status': 'open'
                     });
+
+                    // create extra label and append to extra div
+                    extraLabel = $('#tmp-extra-label').html();
+                    extraDiv.append(extraLabel);
+
+                    // loop from each extra step and process the content
+                    for(var k = 0, lenExtra = allExtra.length; k < lenExtra; k++) {
+                        var extra = allExtra[k],
+                            row = $.parseHTML(extraTmpl.tmp({
+                                        name: name,
+                                        price: extra.price
+                                    }));
+
+                            console.log(extra.price, row);
+
+                        // check if exists description on this topic
+                        if (extra.desc) {
+                            var desc = $('<p/>', {
+                                class: 'desc',
+                                html: extra.desc
+                            });
+
+                            $(row).find('.title').append(desc);
+                        }
+
+                        // append step row to extra div
+                        extraDiv.append(row);
+                    }
+
+                    // append extra div to all-stages div
+                    allStages.append(extraDiv);
                 }
 
         }

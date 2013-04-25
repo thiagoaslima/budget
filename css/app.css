@@ -6495,26 +6495,52 @@ html * {
   font-size: 16px;
 }
 
-/* line 62, app.scss */
-.activityType > .label {
+/* line 63, app.scss */
+[data-status="closed"] .icon-angle-down,
+[data-status="open"] .icon-angle-up {
+  display: inline;
+}
+
+/* line 67, app.scss */
+[data-status="closed"] .icon-angle-up,
+[data-status="open"] .icon-angle-down {
+  display: none;
+}
+
+/* line 70, app.scss */
+[data-status="closed"] .label {
+  background-color: #777777;
+}
+
+/* line 74, app.scss */
+.label {
+  -webkit-transition: all .35s ease-in-out;
+  -moz-transition: all .35s ease-in-out;
+  -ms-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+/* line 82, app.scss */
+.activityType .label {
   border-bottom: 1px solid white;
   border-top: 1px solid white;
   cursor: pointer;
 }
-/* line 67, app.scss */
-.activityType > .label span {
+/* line 87, app.scss */
+.activityType .label span {
   font-size: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #D3D3D3;
   text-shadow: none;
 }
-/* line 74, app.scss */
-.activityType > .label span i {
+/* line 94, app.scss */
+.activityType .label span i {
   vertical-align: 1px;
 }
 
-/* line 80, app.scss */
+/* line 100, app.scss */
 .step > div {
   padding: 10px 0;
   border-bottom: 1px solid white;
@@ -6522,21 +6548,27 @@ html * {
   background-color: #F5F5F5;
 }
 
-/* line 87, app.scss */
+/* line 107, app.scss */
 .core {
   font-style: italic;
   color: #999999;
   padding: 0 45px;
 }
 
-/* line 93, app.scss */
+/* line 113, app.scss */
+[data-included='true'] {
+  font-style: italic;
+  color: #999999;
+}
+
+/* line 118, app.scss */
 .stage > .title p {
   padding-left: 50px;
   color: #777777;
   font-size: 15px;
 }
 
-/* line 99, app.scss */
+/* line 124, app.scss */
 .step {
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -6545,14 +6577,35 @@ html * {
   transition: all .3s ease-in-out;
   cursor: default;
 }
-/* line 107, app.scss */
+/* line 132, app.scss */
 .step:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
 }
-/* line 114, app.scss */
+/* line 139, app.scss */
 .step .desc {
   font-size: 12px;
+  line-height: 15px;
+  margin-top: 5px;
+}
+
+/* line 146, app.scss */
+.extra {
+  padding: 0 45px;
+}
+/* line 149, app.scss */
+.extra .step {
+  cursor: pointer;
+}
+/* line 153, app.scss */
+.extra .remove {
+  text-align: center;
+  color: #D5D5D5;
+}
+
+/* line 161, app.scss */
+[data-included='false'] .step {
+  background-color: #fffff5;
 }
